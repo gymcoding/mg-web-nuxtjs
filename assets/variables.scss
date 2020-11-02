@@ -2,3 +2,34 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+// @import '../tools/_functions.sass';
+@import '~vuetify/src/styles/styles.sass';
+
+.mobile-center1 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.mobile-center2 {
+  max-width: 800px;
+  left: 50% !important;
+  transform: translate(-50%) !important;
+}
+$material-light: (
+  // background: #f3f3f3
+  background: #fafafa
+);
+.v-toolbar {
+  @extend .mobile-center1;
+  border-left: 1px map-deep-get($grey, 'lighten-3') solid !important;
+  border-right: 1px map-deep-get($grey, 'lighten-3') solid !important;
+  border-color: map-deep-get($grey, 'lighten-3') !important;
+}
+.v-application {
+  @extend .mobile-center1;
+  border-left: 1px map-deep-get($grey, 'lighten-3') solid;
+  border-right: 1px map-deep-get($grey, 'lighten-3') solid;
+  border-color: map-deep-get($grey, 'lighten-3') !important;
+}
+.v-bottom-navigation {
+  @extend .mobile-center2
+}

@@ -1,25 +1,36 @@
 <template>
-   <v-card
-      @click="$router.push('/companies/23')"
-    >
-      <div class="d-flex flex-no-wrap">
+  <v-card
+    @click="$router.push('/companies/23')"
+    flat
+    tile
+  >
+    <v-layout pa-3>
+      <v-flex shrink>
         <v-avatar
-          class="ma-3"
-          size="125"
+          size="110"
           tile
         >
           <v-img :src="item.src"></v-img>
         </v-avatar>
+      </v-flex>
+      <v-flex py-3 px-4>
+        <div class="title font-weight-bold">삼성발전기</div>
+        <div class="text-body-2 grey--text text--darken-1">경기도 하남시</div>
         <div>
-          <v-card-text>
-            <div class="title font-weight-bold">삼성발전기</div>
-            <div>경기도 하남시</div>
-            <div>#구매 #수리</div>
-            <v-btn>문의하기</v-btn>
-          </v-card-text>
+          <v-chip
+            v-for="(item, index) in ['구매', '수리', '임대']"
+            class="ma-1 caption"
+            color="grey lighten-4"
+            :key="index"
+            small
+            >
+            {{ item }}
+          </v-chip>
         </div>
-      </div>
-    </v-card>
+
+      </v-flex>
+    </v-layout>
+  </v-card>
 </template>
 
 <script>

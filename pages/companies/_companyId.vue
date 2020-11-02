@@ -1,31 +1,32 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="8">
-      <v-card flat>
-        <v-card flat>
-          <v-layout>
-            <v-flex shrink>
-              <v-img :width="160" aspect-ratio="1" :src="'https://phinf.pstatic.net/image.nmv/blog_2019_05_29_1429/47775570-81b4-11e9-bbd6-00000000464c_03.jpg?type=f238x238'"></v-img>
-            </v-flex>
-            <v-flex pa-5>
-              <div class="headline font-weight-bold">삼성발전기</div>
-              <div class="mt-3 grey--text text--darken-1">대표 : 한소룡</div>
-              <div class="grey--text text--darken-1">전화 : 032-858-6700</div>
-              <div class="grey--text text--darken-1">주소 : 인천 연수구 송도동</div>
-            </v-flex>
-          </v-layout>
-        </v-card>
+  <v-app class="grey">
+    <v-app-bar height="56" color="primary" dark fixed app flat>
+      <v-btn icon dark @click="$router.back()">
+        <v-icon >mdi-arrow-left</v-icon>
+      </v-btn>
+      <v-toolbar-title v-text="'모두의발전기'" />
+    </v-app-bar>
+    <v-main>
+      <v-card flat class="pa-4">
+        <v-layout align-center>
+          <v-flex shrink>
+            <v-img :width="110" aspect-ratio="1" :src="'https://www.makervil.com/upload_files/company/3f2aecf5-ad7d-4a45-9b8e-165b1fb4abb2.jpg'"></v-img>
+          </v-flex>
+          <v-flex pa-3>
+            <div class="text-subtitle-1 font-weight-bold">삼성발전기</div>
+            <div class="mt-2 grey--text text--darken-1">대표 : 한소룡</div>
+            <div class="grey--text text--darken-1">전화 : 032-858-6700</div>
+            <div class="grey--text text--darken-1">주소 : 인천 연수구 송도동</div>
+          </v-flex>
+        </v-layout>
       </v-card>
-      <v-divider class="my-8"></v-divider>
-      <v-card flat>
+      <v-card flat class="pa-4 mt-3">
         <div class="headline font-weight-bold">업체소개</div>
         <div class="mt-3 grey--text text--darken-1">
           안녕하세요. 감사합니다. 저희는 삼성발전기 업체입니다.안녕하세요. 감사합니다. 저희는 삼성발전기 업체입니다.안녕하세요. 감사합니다. 저희는 삼성발전기 업체입니다.안녕하세요. 감사합니다. 저희는 삼성발전기 업체입니다.
         </div>
       </v-card>
-      
-      <v-divider class="my-8"></v-divider>
-      <v-card flat>
+      <v-card flat class="pa-4 mt-3">
         <div class="headline font-weight-bold">서비스 가능 항목</div>
         <div class="mt-3">
           <v-chip color="grey lighten-4" class="grey--text text--darken-1">
@@ -103,8 +104,9 @@
           </v-layout>
         </div>
       </v-card>
-    </v-col>
-  </v-row>
+    </v-main>
+  </v-app>
+  
 </template>
 
 <script>

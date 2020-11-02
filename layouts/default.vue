@@ -1,17 +1,6 @@
 <template>
-  <v-app class="grey">
-    <v-app-bar :clipped-left="clipped" color="primary" dark fixed app>
-      <v-toolbar-title @click="$router.push('/')" v-text="title" />
-    </v-app-bar>
-    <v-main>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-main>
-    <v-footer absolute app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
-  </v-app>
+  <nuxt />
+  
 </template>
 
 <script>

@@ -10,7 +10,10 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css' }
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -43,7 +46,14 @@ export default {
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
+    defaultAssets: {
+      font: {
+        family: 'NanumSquare' 
+      },
+      icons: 'mdi'
+    },
     customVariables: ['~/assets/variables.scss'],
+    treeShake: true,
     theme: {
       dark: false,
       themes: {
@@ -56,6 +66,10 @@ export default {
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
         },
+        light: {
+          primary: colors.lime.base,
+          border: colors.grey.lighten3
+        }
       },
     },
   },
