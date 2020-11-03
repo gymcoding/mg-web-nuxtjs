@@ -59,8 +59,8 @@
         </v-row>
       </v-container>
       <address-stage-modal ref="addressStageModal"></address-stage-modal>
-      <bottom-navigation></bottom-navigation>
     </v-main>
+    <bottom-navigation></bottom-navigation>
   </v-app>
 </template>
 

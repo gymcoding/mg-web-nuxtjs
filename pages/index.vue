@@ -27,8 +27,8 @@
           지금 견적 알아보기
         </v-btn>
       </v-container>
-      <bottom-navigation></bottom-navigation>
     </v-main>
+    <bottom-navigation></bottom-navigation>
   </v-app>
 </template>
 

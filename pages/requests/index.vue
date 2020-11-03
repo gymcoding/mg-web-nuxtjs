@@ -4,8 +4,21 @@
       <v-toolbar-title v-text="'모두의발전기'" />
     </v-app-bar>
     <v-main>
-      <bottom-navigation></bottom-navigation>
+      <v-container>
+        <v-card
+          v-for="(item, index) in 10"
+          :key="index"
+          :class="{ 'mt-4': index !== 0 }"
+          to="/requests/request-01"
+        >
+          <v-card-text>
+            <div>요청카테고리</div>
+            <div class="font-weight-bold text-h6">제목입니다.</div>
+          </v-card-text>
+        </v-card>
+      </v-container>
     </v-main>
+    <bottom-navigation></bottom-navigation>
   </v-app>
 </template>
 
