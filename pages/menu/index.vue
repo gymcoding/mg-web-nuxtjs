@@ -5,11 +5,11 @@
     </v-app-bar>
     <v-main>
       <v-container>
-        <v-card ripple to="/signup">
+        <v-card ripple to="/login">
           <v-card-text>
             <div class="font-weight-bold text-h6">로그인 / 회원가입</div>
-          </v-card-text>
-        </v-card>
+          </v-card-text> 
+        </v-card>                                                                                              
         <v-card ripple to="/account">
           <v-card-text>
             <v-layout row align-center>
